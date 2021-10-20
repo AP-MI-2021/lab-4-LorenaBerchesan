@@ -85,6 +85,46 @@ def lista_string(lst):
     :param lst:
     :return:
     '''
+    rezultat=[]
+    for i in lst:
+        stringList = ''
+        s=str(i)
+        length =len(s)
+        i=0
+        while i<length:
+            if s[i]==',':
+                stringList += 'virgula'
+            elif s[i] == '1':
+                stringList +="unu"
+            elif s[i] == '2':
+                stringList +="doi"
+            elif s[i] =='3':
+                stringList +="trei"
+            elif s[i] == '4':
+                stringList +="patru"
+            elif s[i] == '5':
+                stringList +="cinci"
+            elif s[i] =='6':
+                stringList +="sase"
+            elif s[i] == '7':
+                stringList +="sapte"
+            elif s[i] == '8':
+                stringList +="opt"
+            elif s[i] == '9':
+                stringList +="noua"
+            elif s[i] == '0':
+                stringList +="zero"
+            elif s[i] == '-':
+                stringList +='minus'
+            else:
+                stringList +="zero"
+
+            i=i+1
+        rezultat.append(stringList)
+    return rezultat
+
+
+
 
 
     
@@ -122,7 +162,7 @@ def main():
         if op=='4':
             print(parteI_divizor_parteF(lst))
         if op=='5':
-            break
+            print(lista_string(lst))
         elif op == 'a':
             print(lst)
         elif op == 'x':
